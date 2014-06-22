@@ -10,36 +10,71 @@ The assignment required manipulation of data from an original dataset (https://d
 # Variables information
 Based on the study above, only 66 of the original features have been considered. These are the features containing the "mean()" or the "std()" suffix in the original features list (available from the features.txt file contained in the original dataset). Besides calculating the averages for each subject and each activity, no other manipulation on the value of the data was made. For details on the data type of the features included in the tidy dataset, the reader can therefore be referred to the information enclosed in the original dataset, which can be found here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
 The features considered in the analysis are the following:
-1 tBodyAcc-mean()-X
-2 tBodyAcc-mean()-Y
-3 tBodyAcc-mean()-Z
-4 tBodyAcc-std()-X
-5 tBodyAcc-std()-Y
-6 tBodyAcc-std()-Z
-41 tGravityAcc-mean()-X
-42 tGravityAcc-mean()-Y
-43 tGravityAcc-mean()-Z
-44 tGravityAcc-std()-X
-45 tGravityAcc-std()-Y
-46 tGravityAcc-std()-Z
-81 tBodyAccJerk-mean()-X
-82 tBodyAccJerk-mean()-Y
-83 tBodyAccJerk-mean()-Z
-84 tBodyAccJerk-std()-X
-85 tBodyAccJerk-std()-Y
-86 tBodyAccJerk-std()-Z
-121 tBodyGyro-mean()-X
-122 tBodyGyro-mean()-Y
-123 tBodyGyro-mean()-Z
-124 tBodyGyro-std()-X
-125 tBodyGyro-std()-Y
-126 tBodyGyro-std()-Z
-161 tBodyGyroJerk-mean()-X
-162 tBodyGyroJerk-mean()-Y
-163 tBodyGyroJerk-mean()-Z
-164 tBodyGyroJerk-std()-X
-165 tBodyGyroJerk-std()-Y
-166 tBodyGyroJerk-std()-Z
+* tBodyAcc-mean()-X
+* tBodyAcc-mean()-Y
+* tBodyAcc-mean()-Z
+* tBodyAcc-std()-X
+* tBodyAcc-std()-Y
+* tBodyAcc-std()-Z
+* tGravityAcc-mean()-X
+* tGravityAcc-mean()-Y
+* tGravityAcc-mean()-Z
+* tGravityAcc-std()-X
+* tGravityAcc-std()-Y
+* tGravityAcc-std()-Z
+* tBodyAccJerk-mean()-X
+* tBodyAccJerk-mean()-Y
+* tBodyAccJerk-mean()-Z
+* tBodyAccJerk-std()-X
+* tBodyAccJerk-std()-Y
+* tBodyAccJerk-std()-Z
+* tBodyGyro-mean()-X
+* tBodyGyro-mean()-Y
+* tBodyGyro-mean()-Z
+* tBodyGyro-std()-X
+* tBodyGyro-std()-Y
+* tBodyGyro-std()-Z
+* tBodyGyroJerk-mean()-X
+* tBodyGyroJerk-mean()-Y
+* tBodyGyroJerk-mean()-Z
+* tBodyGyroJerk-std()-X
+* tBodyGyroJerk-std()-Y
+* tBodyGyroJerk-std()-Z
+* tBodyAccMag-mean()
+* tBodyAccMag-std()
+* tGravityAccMag-mean()
+* tGravityAccMag-std()
+* tBodyAccJerkMag-mean()
+* tBodyAccJerkMag-std()
+* tBodyGyroMag-mean()
+* tBodyGyroMag-std()
+* tBodyGyroJerkMag-mean()
+* tBodyGyroJerkMag-std()
+* fBodyAcc-mean()-X
+* fBodyAcc-mean()-Y
+* fBodyAcc-mean()-Z
+* fBodyAcc-std()-X
+* fBodyAcc-std()-Y
+* fBodyAcc-std()-Z
+* fBodyAccJerk-mean()-Y
+* fBodyAccJerk-mean()-Z
+* fBodyAccJerk-std()-X
+* fBodyAccJerk-std()-Y
+* fBodyAccJerk-std()-Z
+* fBodyGyro-mean()-X
+* fBodyGyro-mean()-Y
+* fBodyGyro-mean()-Z
+* fBodyGyro-std()-X
+* fBodyGyro-std()-Y
+* fBodyGyro-std()-Z
+* fBodyAccMag-mean()
+* fBodyAccMag-std()
+* fBodyBodyAccJerkMag-mean()
+* fBodyBodyAccJerkMag-std()
+* fBodyBodyGyroMag-mean()
+* fBodyBodyGyroMag-std()
+* fBodyBodyGyroJerkMag-mean()
+* fBodyBodyGyroJerkMag-std()
 
 # how the tidy dataset has been produced
 The steps followed by the run_analysis.R script to produce the tidy dataset are the following:
@@ -49,5 +84,5 @@ The steps followed by the run_analysis.R script to produce the tidy dataset are 
 * replaces, in the data, the activity identifiers with the activity labels (human readable)
 * merges the 3 types of datasets (measured properties, subjects, activities performed) for the train set and test set
 * merges the resulting train set and test set
-* extracts the mean() and std() variables from the merged dataset
+* extracts the data corresponding to the variables whose name contains the text "mean()"" or "std()"" variables from the merged dataset
 * computes the average of each variable for each activity and each subject and saves it into the tidy dataset (UCI_HAR_mean_std.txt)
